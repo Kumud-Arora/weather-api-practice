@@ -19,7 +19,7 @@ const App = ()=>{
     setError(false);
     setCityName(inputCity);
   }
-  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid={{api_key_weather_app}}`;
+  const URL = 'https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid={{api_key_weather_app}}';
 
   async function fetchData(URL) {
     const response = await fetch(URL);
@@ -49,3 +49,6 @@ const App = ()=>{
 }
 
 export default App
+
+
+
