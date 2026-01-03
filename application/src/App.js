@@ -19,6 +19,7 @@ const App = ()=>{
     setError(false);
     setCityName(inputCity);
   }
+
   const URL = 'https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid={{api_key_weather_app}}';
 
   async function fetchData(URL) {
@@ -43,7 +44,11 @@ const App = ()=>{
         onInputHandler={inputHandler}
         onsubmitHandler={submitHandler}
      />
-     <ShowWeather data = {weatherData}/>
+     {error ? (
+        <h3 className="error">No data found :( </h3>
+     ) : (
+        <ShowWeather data={weatherData} />
+        )}
     </div>
   )
 }

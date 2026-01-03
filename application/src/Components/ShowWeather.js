@@ -14,6 +14,23 @@ const ShowWeather = () =>{
   const tempInCelcius = (temperature / 10).toFixed(2);
   const visibilityInKM = (visibility / 1000).toFixed(2);
 
+  const dynamicBackgroundColor = (temp) => {
+    if (temp < 10) {
+      setDynamicBackground("#bbeafa");
+    }
+    if (temp > 10 && temp <= 30) {
+      setDynamicBackground("#fcfa5b");
+    }
+
+    if (temp > 30) {
+      setDynamicBackground(" #ff512f");
+    }
+  };
+
+  useEffect(() => {
+    dynamicBackgroundColor(tempInCelcius);
+  }, [tempInCelcius]);
+  
 return (
     <React.Fragment>
       <div className="showWeather">
