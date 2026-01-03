@@ -1,31 +1,36 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
-const ShowWeather = () =>{
+const ShowWeather = ({data}) => {
+    const [dynamicBackground, setDynamicBackground] = useState("#fff");
      
-  const city = data.name;
-  const country = data.sys ? data.sys.country : null;
-  const temperature = data.main ? data.main.temp : null;
-  const pressure = data.main ? data.main.pressure : null;
-  const visibility =  data ? data.visibility : null;
-  const humidity = data.main ? data.main.humidity : null;
-  const clouds =  data.clouds ? data.clouds.all : null;
+    const city = data.name;
+    const country = data.sys ? data.sys.country : null;
+    const temperature = data.main ? data.main.temp : null;
+    const pressure = data.main ? data.main.pressure : null;
+    const visibility =  data ? data.visibility : null;
+    const humidity = data.main ? data.main.humidity : null;
+    const clouds =  data.clouds ? data.clouds.all : null;
 
-  const pressureInAtm = (pressure / 1000).toFixed(2);
-  const tempInCelcius = (temperature / 10).toFixed(2);
-  const visibilityInKM = (visibility / 1000).toFixed(2);
+    const pressureInAtm = pressure ? (pressure / 1000).toFixed(2)  : null;
+    const tempInCelcius = temperature ? (temperature - 273.15).toFixed(2) : null;
+    const visibilityInKM = visibility ? (visibility / 1000).toFixed(2) : null;
 
-  const dynamicBackgroundColor = (temp) => {
-    if (temp < 10) {
-      setDynamicBackground("#bbeafa");
-    }
-    if (temp > 10 && temp <= 30) {
-      setDynamicBackground("#fcfa5b");
-    }
+    const dynamicBackgroundColor = (temp) => 
+    {
+        if (temp < 10) 
+        {
+            setDynamicBackground("#bbeafa");
+        }
+        if (temp > 10 && temp <= 30) 
+        {
+            setDynamicBackground("#fcfa5b");
+        }
 
-    if (temp > 30) {
-      setDynamicBackground(" #ff512f");
-    }
-  };
+        if (temp > 30) 
+        {
+            setDynamicBackground(" #ff512f");
+        }
+    };
 
   useEffect(() => {
     dynamicBackgroundColor(tempInCelcius);

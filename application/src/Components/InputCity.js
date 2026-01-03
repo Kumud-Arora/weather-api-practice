@@ -10,7 +10,7 @@ const InputCity = ({ onsubmitHandler, city, onInputHandler }) => {
                 placeholder="City..."
             />
             <br/>
-            <button className="input_btn" type="submit" onClick={onSubmitHandler}>
+            <button className="input_btn" type="submit" onClick={onsubmitHandler}>
                 Search
             </button>
         </div>
