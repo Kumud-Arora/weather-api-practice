@@ -58,13 +58,22 @@ application/
 
 1. Clone or download this repository
 2. Navigate to the application directory:
-  bash   cd application
+```bash
+   cd application
+```
 3. Install dependencies:
-  bash   npm install
+```bash
+   npm install
+```
 4. Get a free API key from [OpenWeatherMap](https://openweathermap.org/api)
-5. Add your API key to src/App.js (line 23)
+5. Create a `.env` file in the `application` directory and add your API key:
+```
+   REACT_APP_WEATHER_API_KEY=your_api_key_here
+```
 6. Start the development server:
-  bash   npm start
+```bash
+   npm start
+```
 7. Open your browser and go to http://localhost:3000
 
 ## 📜 License
