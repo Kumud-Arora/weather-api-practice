@@ -3,35 +3,35 @@ Just a simple weather app I made while learning how to use APIs in React. You ca
 
 ### Key Features
 
-🔍 **City Search**
+- 🔍 **City Search**
 
-Search for any city worldwide
-Real-time weather data fetching
-Error handling for invalid city names
+  - Search for any city worldwide
+  - Real-time weather data fetching
+  - Error handling for invalid city names
 
-🌡️ **Weather Information**
+- 🌡️ **Weather Information**
 
-Current temperature (in Celsius)
-Atmospheric pressure (in atm)
-Visibility distance (in km)
-Humidity percentage
-Cloud coverage percentage
+  - Current temperature (in Celsius)
+  - Atmospheric pressure (in atm)
+  - Visibility distance (in km)
+  - Humidity percentage
+  - Cloud coverage percentage
 
 
-🎨 **Dynamic UI**
+- 🎨 **Dynamic UI**
 
-Background color changes based on temperature
-Cold (< 10°C): Light blue
-Moderate (10-30°C): Yellow
-Hot (> 30°C): Red/Orange gradient
+  - Background color changes based on temperature
+  - Cold (< 10°C): Light blue
+  - Moderate (10-30°C): Yellow
+  - Hot (> 30°C): Red/Orange gradient
 
 
 ## 📘 Technical Details
 
-Framework: React 18.2.0
-API: OpenWeatherMap API
-Styling: CSS3 with gradients and box shadows
-State Management: React Hooks (useState, useEffect)
+- Framework: React 18.2.0
+- API: OpenWeatherMap API
+- Styling: CSS3 with gradients and box shadows
+- State Management: React Hooks (useState, useEffect)
 
 ## 🏗️ Project Structure
 ```
