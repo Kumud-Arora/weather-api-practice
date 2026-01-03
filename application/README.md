@@ -1,0 +1,76 @@
+🌤️ Weather App
+Just a simple weather app I made while learning how to use APIs in React. You can search for any city and it shows you the current weather.
+
+Key Features
+
+🔍 City Search
+
+Search for any city worldwide
+Real-time weather data fetching
+Error handling for invalid city names
+
+
+🌡️ Weather Information
+
+Current temperature (in Celsius)
+Atmospheric pressure (in atm)
+Visibility distance (in km)
+Humidity percentage
+Cloud coverage percentage
+
+
+🎨 Dynamic UI
+
+Background color changes based on temperature
+Cold (< 10°C): Light blue
+Moderate (10-30°C): Yellow
+Hot (> 30°C): Red/Orange gradient
+
+
+📘 Technical Details
+
+Framework: React 18.2.0
+API: OpenWeatherMap API
+Styling: CSS3 with gradients and box shadows
+State Management: React Hooks (useState, useEffect)
+
+🏗️ Project Structure
+application/
+│
+├── src/
+│   ├── Components/
+│   │   ├── Header.js          # App header component
+│   │   ├── InputCity.js       # Search input component
+│   │   └── ShowWeather.js     # Weather display component
+│   │
+│   ├── App.js                 # Main app logic & API calls
+│   ├── index.js               # React DOM renderer
+│   └── styles.css             # All styling
+│
+├── public/
+│   ├── index.html
+│   └── manifest.json
+│
+└── package.json
+
+⚙️ Installation
+
+Clone or download this repository
+Navigate to the application directory:
+
+bash   cd application
+
+Install dependencies:
+
+bash   npm install
+
+Get a free API key from [OpenWeatherMap](https://openweathermap.org/api)
+Add your API key to src/App.js (line 23)
+Start the development server:
+
+bash   npm start
+
+Open your browser and go to http://localhost:3000
+
+📜 License
+This project is open source and available for educational purposes.

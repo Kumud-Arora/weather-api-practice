@@ -20,7 +20,9 @@ const App = ()=>{
     setCityName(inputCity);
   }
 
-  const URL = 'https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid={{api_key_weather_app}}';
+
+  const API_KEY = process.env.REACT_APP_WEATHER_API_KEY; 
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
 
   async function fetchData(URL) {
     const response = await fetch(URL);
