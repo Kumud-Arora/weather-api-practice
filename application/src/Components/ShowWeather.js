@@ -30,30 +30,30 @@ const ShowWeather = () =>{
   useEffect(() => {
     dynamicBackgroundColor(tempInCelcius);
   }, [tempInCelcius]);
-  
+
 return (
     <React.Fragment>
       <div className="showWeather">
-        <div className="weather_main">
+        <div className="weather_main" >
           <h1 className="weather_heading">
-            Seattle<br /> <span> AR</span>
+            {city} <br /> <span> {country}</span>
           </h1>
-          <h3 className="temp">Temperature: 25C</h3>
+          <h3 className="temp">Temperature: {tempInCelcius} C</h3>
           <hr />
           <div className="weatherData">
             <p>
-              Pressure <br /> 10 atm
+              Pressure <br /> {pressureInAtm} atm{" "}
             </p>
             <p>
-              Visibility <br /> 5 Km
+              Visibility <br /> {visibilityInKM} Km
             </p>
           </div>
           <div className="weatherData">
             <p>
-              Humidity: <br /> 80 %
+              Humidity: <br /> {humidity}%{" "}
             </p>
             <p>
-              Clouds: <br /> 10 %
+              Clouds: <br /> {clouds} %{" "}
             </p>
           </div>
         </div>
